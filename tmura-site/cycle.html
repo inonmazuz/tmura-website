@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מחזור החיים של האישה – תמורה רפואה סינית</title>
+<script src="shared.js"></script>
+<style>
+  .page-hero { background:linear-gradient(160deg,#EEF5E8 0%,#F7F0E6 100%); padding:64px 24px 48px; text-align:center; }
+  .page-hero h1 { font-family:'Frank Ruhl Libre',serif; font-size:clamp(1.8rem,5vw,2.5rem); font-weight:900; color:#1a1a1a; max-width:680px; margin:0 auto 14px; line-height:1.35; }
+  .page-hero p { font-size:1rem; color:#444444; max-width:560px; margin:0 auto; line-height:1.75; }
+  .cycle-track { display:flex; gap:0; overflow-x:auto; padding:24px 0; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+  .cycle-stage { flex:0 0 200px; scroll-snap-align:start; background:white; border:1px solid #e0e0e0; border-radius:8px; padding:22px 18px; text-align:center; margin-left:14px; transition:all 0.2s; }
+  .cycle-stage:first-child { margin-right:4px; }
+  .cycle-stage:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,0.09); border-color:#7aaa8a; }
+  .stage-icon { font-size:2.2rem; margin-bottom:10px; }
+  .stage-title { font-weight:700; font-size:1rem; color:#1a1a1a; margin-bottom:6px; font-family:'Frank Ruhl Libre',serif; }
+  .stage-age { font-size:0.78rem; color:#777777; margin-bottom:8px; font-weight:700; }
+  .stage-desc { font-size:0.82rem; color:#444444; line-height:1.6; }
+  .phase-section { padding:56px 24px; }
+  .phase-card { background:white; border:1px solid #e0e0e0; border-radius:8px; padding:28px 24px; margin-bottom:24px; }
+  .phase-card h3 { font-family:'Frank Ruhl Libre',serif; font-size:1.2rem; font-weight:700; color:#1a1a1a; margin-bottom:6px; display:flex; align-items:center; gap:10px; }
+  .phase-card .phase-subtitle { font-size:0.82rem; color:#4a7c59; font-weight:700; margin-bottom:14px; }
+  .phase-card p { font-size:0.9rem; color:#444444; line-height:1.8; margin-bottom:10px; }
+  .phase-card ul { padding-right:20px; list-style:disc; font-size:0.88rem; color:#444444; line-height:1.8; }
+  .phase-card ul li { margin-bottom:5px; }
+  .inset-box { background:linear-gradient(135deg,rgba(74,124,89,0.1),rgba(160,133,108,0.06)); border-right:3px solid #7aaa8a; padding:16px 20px; border-radius:0 12px 12px 0; margin-top:14px; }
+  .inset-box p { font-size:0.88rem; color:#444444; line-height:1.75; margin:0; }
+  .monthly-phases { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+  .monthly-card { border-radius:14px; padding:18px; text-align:center; }
+  .monthly-card h4 { font-weight:700; font-size:0.9rem; margin-bottom:6px; }
+  .monthly-card p { font-size:0.8rem; line-height:1.5; }
+  .m1 { background:#FFF0F5; border:1px solid #FFCCE0; }
+  .m2 { background:#FFF8EE; border:1px solid #FFD9AA; }
+  .m3 { background:#F0F9F0; border:1px solid #AADAAA; }
+  .m4 { background:#F5F0FF; border:1px solid #C8AAEE; }
+</style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">דף הבית</a> / מחזור החיים</div>
+  <div style="margin-bottom:14px"><span class="tag">🌙 מחזור החיים</span></div>
+  <h1>מחזור החיים של האישה<br>לפי הרפואה הסינית</h1>
+  <p>מגיל ההתבגרות דרך הפוריות ועד גיל המעבר — כיצד הרפואה הסינית מבינה ומלווה את כל שלב בחיי האישה.</p>
+</section>
+
+<!-- LIFECYCLE TRACK -->
+<div style="background:#f8f6f2;padding:40px 24px">
+  <h2 class="section-title">שלבי חיי האישה</h2>
+  <p class="section-sub">כל שלב מביא עמו שינויים, אתגרים — ומתנות</p>
+  <div class="cycle-track">
+    <div class="cycle-stage"><div class="stage-icon">🌱</div><div class="stage-title">התבגרות</div><div class="stage-age">11–16</div><div class="stage-desc">ראשית המחזוריות, גיל מכונן לאיזון הורמונלי ארוך-טווח</div></div>
+    <div class="cycle-stage"><div class="stage-icon">🌸</div><div class="stage-title">עשורי הפוריות</div><div class="stage-age">17–35</div><div class="stage-desc">שנות השיא של הפוריות, המחזוריות, והאנרגיה הנשית</div></div>
+    <div class="cycle-stage"><div class="stage-icon">🤰</div><div class="stage-title">הריון ולידה</div><div class="stage-age">אינד.</div><div class="stage-desc">תמיכה לכל אורך הדרך, מהכוונה להרות ועד הלידה</div></div>
+    <div class="cycle-stage"><div class="stage-icon">🌿</div><div class="stage-title">אחרי לידה</div><div class="stage-age">0–12m</div><div class="stage-desc">תקופת השיקום — קריטית לבריאות ארוכת הטווח</div></div>
+    <div class="cycle-stage"><div class="stage-icon">🍂</div><div class="stage-title">גיל המעבר</div><div class="stage-age">45–55</div><div class="stage-desc">מעבר הורמונלי עמוק — אפשר לעשות אותו בנחת</div></div>
+  </div>
+</div>
+
+<!-- MONTHLY CYCLE -->
+<div class="phase-section" style="max-width:860px;margin:0 auto">
+  <h2 class="section-title">המחזור החודשי — ה"שעון" הפנימי</h2>
+  <p class="section-sub">הרפואה הסינית מחלקת את המחזור לארבעה שלבים, כל אחד עם אנרגיה, צרכים וכלי טיפול שונים</p>
+  <div class="monthly-phases">
+    <div class="monthly-card m1"><h4>🌑 שלב הווסת</h4><p>ניקוי ושחרור. הגוף נפרד מהמחזור הקודם. זמן לנוח ולא להכריח.</p></div>
+    <div class="monthly-card m2"><h4>🌒 שלב הזקיק</h4><p>בניה ועלייה. הגוף מכין את הביצית. אנרגיה עולה, מצב רוח משתפר.</p></div>
+    <div class="monthly-card m3"><h4>🌕 ביוץ</h4><p>שיא האנרגיה. הרגע המכונן של המחזור. זמן לפוריות, ליצירה וחיבור.</p></div>
+    <div class="monthly-card m4"><h4>🌖 שלב הלוטאלי</h4><p>הכנה לוסת. אם לא הגיע הריון — הגוף מתכונן לשחרר. PMS נובע משלב זה.</p></div>
+  </div>
+  <div class="inset-box" style="margin-top:24px"><p>כשהמחזור אינו סדיר, כשיש כאבים, כשה-PMS חמור — אלה סימנים שאחד מהשלבים אינו זורם כראוי. הרפואה הסינית יודעת לאתר איפה בדיוק התקיעות, ולשחרר אותה.</p></div>
+</div>
+
+<!-- LIFE STAGES DEEP DIVE -->
+<div style="background:#f8f6f2;padding:0 24px 64px">
+  <div class="section" style="padding-top:56px">
+    <h2 class="section-title">שלבי החיים לעומק</h2>
+
+    <div class="phase-card">
+      <h3><span>🌱</span> גיל ההתבגרות</h3>
+      <div class="phase-subtitle">הבסיס לאיזון ארוך-טווח</div>
+      <p>גיל ההתבגרות הוא אחד השלבים הקריטיים ביותר לבריאות הורמונלית עתידית. לפי הרפואה הסינית, האופן שבו מתחיל המחזור — עם כאבים או בלי, בסדירות או לא — משקף את מצב המערכות הבסיסיות ביגוף.</p>
+      <p>כאבי מחזור חמורים בנערות צעירות, וסת לא סדירה מהתחלה, ואקנה הורמונלי — כל אלה אינם "נורמליים" שצריך לחיות איתם. אלו סימנים שהגוף צריך עזרה.</p>
+      <ul>
+        <li>כאבי מחזור — צמחי מרפא יכולים להקל משמעותית</li>
+        <li>וסת לא סדירה — ניתן לייצב כבר בשלב מוקדם</li>
+        <li>אקנה הורמונלי — טיפול בשורש ולא בפנים</li>
+      </ul>
+    </div>
+
+    <div class="phase-card">
+      <h3><span>🌸</span> שנות הפוריות</h3>
+      <div class="phase-subtitle">שחלות פוליציסטיות, מחזוריות ובריאות הורמונלית</div>
+      <p>שנות השיא של הפוריות הן גם הזמן שבו תסמונת השחלות הפוליציסטיות (PCOS) מתבטאת בעוצמה הגדולה ביותר. הרפואה הסינית מציעה גישה שמסדירה את המחזוריות טבעית ויוצרת סביבה פנימית שמאפשרת פוריות.</p>
+      <ul>
+        <li>הסדרת מחזור וסדר ביוץ</li>
+        <li>תמיכה בנסיונות הריון טבעיים</li>
+        <li>הכנה לפני טיפולי פוריות לשיפור סיכויים</li>
+        <li>ניהול PMS ותסמינים קדם-וסתיים</li>
+      </ul>
+    </div>
+
+    <div class="phase-card">
+      <h3><span>🤰</span> הריון ולידה</h3>
+      <div class="phase-subtitle">ליווי לכל אורך הדרך</div>
+      <p>חני עבדה כמטפלת בחדרי הלידה של בית החולים הדסה עין כרם — ניסיון ייחודי שמעניק הבנה עמוקה של התהליך. הרפואה הסינית יכולה לתמוך לאורך ההריון:</p>
+      <ul>
+        <li>בחילות בוקר ותסמיני ההריון הראשוני</li>
+        <li>כאבי גב ועייפות</li>
+        <li>הכנה ללידה — פיסית ורגשית</li>
+        <li>תמיכה בהנקה</li>
+      </ul>
+    </div>
+
+    <div class="phase-card">
+      <h3><span>🍂</span> גיל המעבר</h3>
+      <div class="phase-subtitle">מעבר הורמונלי — בנחת</div>
+      <p>גיל המעבר אינו מחלה — הוא מעבר. אבל המעבר יכול להיות קשה, עם גלי חום, הפרעות שינה, שינויי מצב רוח, ויובש. הרפואה הסינית מציעה כלים יעילים לריכוך תסמיני גיל המעבר:</p>
+      <ul>
+        <li>גלי חום ורחרוחים</li>
+        <li>הפרעות שינה</li>
+        <li>שינויים במצב הרוח</li>
+        <li>שמירה על איזון הורמונלי טבעי ככל האפשר</li>
+      </ul>
+      <div class="inset-box"><p>גיל המעבר בראייה הסינית הוא כניסה לשלב חיים חדש — עם חוכמה וכוח שלא היו קודם. המטרה היא לעשות את המעבר הזה בבריאות ובנחת.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#2d5a3d,#4a7c59);padding:56px 24px;text-align:center;color:white">
+  <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:1.8rem;font-weight:900;margin-bottom:10px">באיזה שלב בחיים את נמצאת?</h2>
+  <p style="opacity:0.85;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7">לא משנה מה השלב — יש מה לעשות. פגישת האבחון תיתן לך תמונה ברורה ותוכנית מותאמת.</p>
+  <a class="btn-primary" href="contact.html" style="background:white;color:#4a7c59">לקביעת פגישה ←</a>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תמורה – רפואה סינית לנשים</title>
+<script src="shared.js"></script>
+<style>
+  .hero { padding:64px 24px 52px; text-align:center; background:white; }
+  .hero-logo { width:80px; height:80px; margin:0 auto 20px; display:block; }
+  .hero h1 { font-family:'Frank Ruhl Libre',serif; font-size:clamp(1.6rem,4.5vw,2.4rem); font-weight:900; color:#1a1a1a; max-width:700px; margin:0 auto 18px; line-height:1.4; }
+  .hero-sub { font-size:clamp(0.95rem,2.5vw,1.1rem); color:#444; max-width:520px; margin:0 auto 8px; line-height:1.8; }
+  .hero-tagline { font-size:1rem; color:#4a7c59; font-weight:700; margin-bottom:32px; }
+  .hero-cta { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn-outline { background:transparent; color:#4a7c59; border:2px solid #4a7c59; padding:11px 26px; border-radius:30px; font-family:'Heebo',sans-serif; font-size:0.88rem; font-weight:700; cursor:pointer; text-decoration:none; transition:all 0.2s; display:inline-block; }
+  .btn-outline:hover { background:#4a7c59; color:white; }
+  .section-divider { text-align:center; padding:12px 0; color:#c8b89a; letter-spacing:12px; font-size:1rem; }
+  .pain-section { padding:52px 24px; max-width:760px; margin:0 auto; }
+  .pain-section h2 { font-family:'Frank Ruhl Libre',serif; font-size:clamp(1.1rem,3vw,1.5rem); font-weight:700; color:#1a1a1a; margin-bottom:22px; line-height:1.55; }
+  .pain-list { list-style:none; margin-bottom:28px; }
+  .pain-list li { padding:10px 0 10px 0; border-bottom:1px solid #f0f0f0; font-size:0.92rem; color:#444; line-height:1.7; padding-right:20px; position:relative; }
+  .pain-list li::before { content:'—'; position:absolute; right:0; color:#c8b89a; }
+  .pain-highlight { border-right:3px solid #4a7c59; padding:16px 20px; background:#fafaf8; font-size:0.92rem; color:#1a1a1a; line-height:1.8; }
+  .philosophy { background:#f8f6f2; padding:48px 24px; text-align:center; }
+  .philosophy-inner { max-width:680px; margin:0 auto; }
+  .philosophy h2 { font-family:'Frank Ruhl Libre',serif; font-size:1.6rem; font-weight:900; color:#1a1a1a; margin-bottom:24px; }
+  .philosophy-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px; }
+  .phil-box { background:white; border:1px solid #e0e0e0; border-radius:8px; padding:18px 14px; font-size:0.88rem; color:#444; line-height:1.65; }
+  .phil-box .lbl { font-weight:700; color:#1a1a1a; margin-bottom:6px; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; }
+  .phil-vs { font-family:'Frank Ruhl Libre',serif; font-size:1.2rem; color:#c8b89a; font-weight:700; }
+  .philosophy p { font-size:0.9rem; color:#555; line-height:1.8; }
+  @media(max-width:500px){ .philosophy-grid{grid-template-columns:1fr} .phil-vs{display:none} }
+  .steps-section { padding:52px 24px; max-width:760px; margin:0 auto; }
+  .steps-list { margin-top:28px; }
+  .step-item { display:flex; gap:20px; padding:22px 0; border-bottom:1px solid #f0f0f0; }
+  .step-item:last-child { border-bottom:none; }
+  .step-num { font-family:'Frank Ruhl Libre',serif; font-size:2.2rem; font-weight:900; color:#4a7c59; opacity:0.3; flex-shrink:0; line-height:1; width:38px; }
+  .step-content h3 { font-family:'Frank Ruhl Libre',serif; font-size:1.1rem; font-weight:700; color:#1a1a1a; margin-bottom:5px; }
+  .step-content p { font-size:0.88rem; color:#555; line-height:1.75; }
+  .results-section { background:#f8f6f2; padding:52px 24px; }
+  .results-inner { max-width:760px; margin:0 auto; }
+  .results-list { list-style:none; margin-top:24px; }
+  .results-list li { padding:11px 0; border-bottom:1px solid #ece8e2; font-size:0.92rem; color:#444; line-height:1.7; display:flex; gap:10px; align-items:flex-start; }
+  .results-list li::before { content:'✓'; color:#4a7c59; font-weight:700; flex-shrink:0; margin-top:1px; }
+  .results-list li:last-child { border-bottom:none; }
+  .test-section { padding:52px 24px; }
+  .test-inner { max-width:900px; margin:0 auto; }
+  .test-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; margin-top:28px; }
+  .test-img { width:100%; border-radius:6px; display:block; border:1px solid #e8e8e8; }
+  .topics-section { background:#f8f6f2; padding:52px 24px; }
+  .topics-inner { max-width:760px; margin:0 auto; }
+  .topics-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:10px; margin-top:26px; }
+  .topic-card { background:white; border:1px solid #e0e0e0; border-radius:6px; padding:18px 14px; text-decoration:none; color:inherit; transition:border-color 0.15s; display:block; }
+  .topic-card:hover { border-color:#4a7c59; }
+  .topic-icon { font-size:1.5rem; margin-bottom:8px; }
+  .topic-card h3 { font-size:0.88rem; font-weight:700; color:#1a1a1a; margin-bottom:3px; }
+  .topic-card p { font-size:0.78rem; color:#666; line-height:1.5; }
+  .topic-arrow { color:#4a7c59; font-size:0.78rem; margin-top:8px; font-weight:700; }
+  .cta-section { padding:56px 24px; text-align:center; background:white; border-top:1px solid #ece8e2; }
+  .cta-section h2 { font-family:'Frank Ruhl Libre',serif; font-size:clamp(1.3rem,3.5vw,1.8rem); font-weight:900; color:#1a1a1a; margin-bottom:10px; }
+  .cta-section .desc { color:#555; margin-bottom:16px; max-width:440px; margin-left:auto; margin-right:auto; line-height:1.75; font-size:0.92rem; }
+  .price-note { font-size:1rem; font-weight:700; color:#4a7c59; margin-bottom:22px; display:block; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <img class="hero-logo" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/04/tmura_icon_1-300x300-1.png?fit=300%2C300&ssl=1" alt="תמורה">
+  <h1>הדרך הטבעית להיפטר משחלות פוליציסטיות<br>(או לפחות להפחית מאוד בתסמינים)</h1>
+  <p class="hero-sub">התהליך שיעזור לך להגיע לאיזון הורמונלי ומחזוריות תקינה, עם וסת שמגיעה מדי חודש, כזו שמאפשרת לך להרגיש טוב עם הגוף</p>
+  <p class="hero-tagline">מבלי להיות תלויה בגלולות</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="contact.html">לקביעת פגישת אבחון ←</a>
+    <a class="btn-outline" href="pcos.html">מה זה שחלות פוליציסטיות?</a>
+  </div>
+</section>
+
+<div class="section-divider">✦ ✦ ✦</div>
+
+<section class="pain-section">
+  <h2>יש ימים שבהם את מרגישה שאת לא מכירה את הגוף שלך ואת גם לא יודעת כבר למה לצפות –</h2>
+  <img src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/04/d7a0d7a7d795d793d795d7aa-d79bd797d795d79c-d79bd794d794-2.png?resize=1200%2C54&ssl=1" alt="" style="width:100%;margin-bottom:20px;opacity:0.5">
+  <ul class="pain-list">
+    <li>הווסת הלא סדירה, שכבר שיבשה לך אין ספור חופשות זוגיות</li>
+    <li>הכאבים שיכולים להשבית אותך לכמה ימים בדיוק כשאת בשיא הלחץ בעבודה</li>
+    <li>הביוץ שאין לך מושג מתי יגיע — מה שרק מוסיף ללחץ סביב ניסיונות הכניסה להריון</li>
+    <li>הפצעונים בפנים, שיעור היתר, והתנודות הרגשיות — כל אלה מפריעים ומשבשים את שגרת החיים שלך ובצדק</li>
+  </ul>
+  <div class="pain-highlight">
+    <strong>את צריכה ורוצה לטפל בזה ולהרגיש טוב יותר</strong> — אבל את רוצה טיפול שיאפשר לך להתחבר למחזוריות הטבעית שלך ולעשות "כיול מחדש" לגוף, לעבור תהליך שיאפשר לגופך להתחזק ולעזור לעצמו להגיע למצב מיטבי באופן טבעי.
+  </div>
+</section>
+
+<div class="section-divider">✦ ✦ ✦</div>
+
+<section class="philosophy">
+  <div class="philosophy-inner">
+    <h2>שחלות פוליציסטיות הן לא מחלה</h2>
+    <div class="philosophy-grid">
+      <div class="phil-box"><div class="lbl">רפואה מערבית</div>שחלות פוליציסטיות הן <strong>הבעיה</strong></div>
+      <div class="phil-vs">VS</div>
+      <div class="phil-box"><div class="lbl">רפואה סינית</div>שחלות פוליציסטיות הן רק <strong>סימפטום</strong> לבעיה</div>
+    </div>
+    <p>הגישה ההוליסטית של הרפואה הסינית מאפשרת לתת מענה שלם ובעל סיכויי הצלחה טובים יותר — כי אנחנו מטפלות בשורש, לא בסימפטום.</p>
+  </div>
+</section>
+
+<section class="steps-section">
+  <h2 class="section-title">התכנית השלמה לטיפול בשחלות פוליציסטיות</h2>
+  <p class="section-sub">תוכנית ליווי אישית יד ביד, דרך צמחי מרפא ותזונה</p>
+  <img src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/04/d7a0d7a7d795d793d795d7aa-d7aad79bd79cd7aa.png?resize=1200%2C54&ssl=1" alt="" style="width:100%;opacity:0.5;margin-bottom:8px">
+  <div class="steps-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>פגישת אבחון</h3>
+        <p>שעה שלמה להבנת השורש. תשאול מעמיק + תמונת לשון. בסוף — סיכום כתוב ותוכנית ברורה. הפגישה מקוונת דרך Google Meet.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>תכנית טיפולית מותאמת אישית</h3>
+        <p>פורמולת צמחי מרפא מותאמת אישית + תוכנית תזונתית ממוקדת לאיזון הורמונלי ואיזון רמות האינסולין + כלים נוספים לפי הצורך.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>תמיכה וליווי אישי</h3>
+        <p>פגישות מעקב דו-חודשיות + זמינות בוואטסאפ לשאלות והתייעצויות. בסוף כל שבוע "דו"ח מצב" קצר. משך הטיפול: 3–6 חודשים.</p>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:32px">
+    <a class="btn-primary" href="method.html">לקריאה נוספת על שיטת הטיפול</a>
+  </div>
+</section>
+
+<section class="results-section">
+  <div class="results-inner">
+    <h2 class="section-title">מה יקרה אחרי התהליך?</h2>
+    <p class="section-sub">11 שנות ניסיון וליווי של מאות נשים מראים תוצאות עקביות</p>
+    <ul class="results-list">
+      <li>וסת סדירה וביוץ תקין — מחזוריות קלילה יותר עם פחות כאבים</li>
+      <li>ביטחון מחודש ביכולת הגוף שלך להשיג הריון טבעי וספונטני</li>
+      <li>גוף נינוח ורגוע — עיכול משופר, בטן פחות נפוחה, שינה רציפה</li>
+      <li>איזון הורמונלי מהשורש — לא פלסטר, אלא פתרון אמיתי</li>
+    </ul>
+  </div>
+</section>
+
+<section class="test-section">
+  <div class="test-inner">
+    <h2 class="section-title">" נשים שהצליחו להשיג את המטרה שלהן מספרות:</h2>
+    <div class="test-grid">
+      <img class="test-img" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/11/testimonial_1_l.jpg?resize=353%2C445&ssl=1" alt="">
+      <img class="test-img" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/11/testimonial_2_n.jpg?resize=353%2C353&ssl=1" alt="">
+      <img class="test-img" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/11/testimonial_3_sh.jpg?resize=353%2C445&ssl=1" alt="">
+      <img class="test-img" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/11/testimonial_4_h.jpg?resize=353%2C445&ssl=1" alt="">
+      <img class="test-img" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/11/testimonial_5_k.jpg?resize=644%2C431&ssl=1" alt="">
+      <img class="test-img" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/11/testimonial_6_r.jpg?resize=353%2C320&ssl=1" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="topics-section">
+  <div class="topics-inner">
+    <h2 class="section-title">נושאים נוספים</h2>
+    <div class="topics-grid">
+      <a class="topic-card" href="pcos.html"><div class="topic-icon">🌀</div><h3>שחלות פוליציסטיות</h3><p>הבנה מעמיקה</p><div class="topic-arrow">לקריאה ←</div></a>
+      <a class="topic-card" href="cycle.html"><div class="topic-icon">🌙</div><h3>מחזור החיים</h3><p>כל שלבי חיי האישה</p><div class="topic-arrow">לקריאה ←</div></a>
+      <a class="topic-card" href="herbs.html"><div class="topic-icon">🌿</div><h3>צמחי מרפא</h3><p>שיטת שאנג חאן לון</p><div class="topic-arrow">לקריאה ←</div></a>
+      <a class="topic-card" href="method.html"><div class="topic-icon">⚕️</div><h3>שיטת הטיפול</h3><p>אבחון וליווי אישי</p><div class="topic-arrow">לקריאה ←</div></a>
+      <a class="topic-card" href="about.html"><div class="topic-icon">👩‍⚕️</div><h3>אודות חני</h3><p>הסיפור האישי</p><div class="topic-arrow">לקריאה ←</div></a>
+      <a class="topic-card" href="blog.html"><div class="topic-icon">📖</div><h3>מאמרים</h3><p>תוכן ותובנות</p><div class="topic-arrow">לקריאה ←</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>מוכנה להתחיל?</h2>
+  <p class="desc">פגישת האבחון היא הצעד הראשון. מקוונת דרך Google Meet, שעה שלמה, ותצאי עם תמונה ברורה ותוכנית.</p>
+  <span class="price-note">עלות פגישת אבחון: 400 ₪</span>
+  <a class="btn-primary" href="contact.html">לקביעת פגישת אבחון ←</a>
+</section>
+
+</body>
+</html>

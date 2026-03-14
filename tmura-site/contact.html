@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>קביעת פגישה – תמורה רפואה סינית</title>
+<script src="shared.js"></script>
+<style>
+  .page-hero { background:linear-gradient(160deg,#EEF5E8 0%,#F7F0E6 100%); padding:56px 24px 40px; text-align:center; }
+  .page-hero h1 { font-family:'Frank Ruhl Libre',serif; font-size:clamp(1.8rem,5vw,2.3rem); font-weight:900; color:#1a1a1a; max-width:600px; margin:0 auto 12px; line-height:1.35; }
+  .page-hero p { font-size:1rem; color:#444444; max-width:500px; margin:0 auto; line-height:1.75; }
+  .contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:32px; max-width:960px; margin:56px auto; padding:0 24px; }
+  @media(max-width:680px){ .contact-layout{grid-template-columns:1fr} }
+  .booking-form { background:white; border:1.5px solid #e0e0e0; border-radius:10px; padding:32px; box-shadow:0 4px 20px rgba(0,0,0,0.06); }
+  .booking-form h2 { font-family:'Frank Ruhl Libre',serif; font-size:1.3rem; font-weight:900; color:#4a7c59; margin-bottom:22px; }
+  .form-group { display:flex; flex-direction:column; gap:5px; margin-bottom:14px; }
+  .form-group label { font-size:0.82rem; font-weight:700; color:#444444; }
+  .form-group input, .form-group textarea, .form-group select { border:1.5px solid #e0e0e0; border-radius:10px; padding:11px 14px; font-family:'Heebo',sans-serif; font-size:0.92rem; color:#1a1a1a; background:#FDFAF6; transition:border-color 0.2s; direction:rtl; }
+  .form-group input:focus, .form-group textarea:focus { outline:none; border-color:#7aaa8a; background:white; }
+  .form-group textarea { resize:vertical; min-height:85px; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:480px){ .form-row{grid-template-columns:1fr} }
+  .form-check { display:flex; align-items:flex-start; gap:8px; margin-bottom:18px; }
+  .form-check input { margin-top:3px; accent-color:#4a7c59; }
+  .form-check label { font-size:0.82rem; color:#444444; line-height:1.5; }
+  .btn-submit { width:100%; background:#4a7c59; color:white; border:none; padding:15px; border-radius:12px; font-family:'Heebo',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; transition:all 0.25s; box-shadow:0 4px 14px rgba(74,124,89,0.3); }
+  .btn-submit:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(74,124,89,0.4); }
+  .form-success { display:none; text-align:center; padding:24px; }
+  .form-success .s-icon { font-size:3rem; margin-bottom:10px; }
+  .form-success h4 { font-size:1.1rem; font-weight:700; color:#4a7c59; margin-bottom:6px; }
+  .form-success p { font-size:0.88rem; color:#444444; line-height:1.6; }
+
+  .info-panel { display:flex; flex-direction:column; gap:20px; }
+  .info-card { background:white; border:1px solid #e0e0e0; border-radius:8px; padding:24px; }
+  .info-card h3 { font-family:'Frank Ruhl Libre',serif; font-size:1.05rem; font-weight:700; color:#1a1a1a; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .info-card p, .info-card ul { font-size:0.88rem; color:#444444; line-height:1.75; }
+  .info-card ul { padding-right:18px; list-style:disc; }
+  .info-card ul li { margin-bottom:5px; }
+  .price-highlight { background:linear-gradient(135deg,#4a7c59,#2d5a3d); color:white; border-radius:8px; padding:22px; text-align:center; }
+  .price-highlight .ph-amount { font-family:'Frank Ruhl Libre',serif; font-size:2.5rem; font-weight:900; }
+  .price-highlight .ph-label { font-size:0.85rem; opacity:0.85; margin-bottom:14px; }
+  .btn-pay { width:100%; background:linear-gradient(135deg,#A0856C,#7A5C42); color:white; border:none; padding:13px; border-radius:10px; font-family:'Heebo',sans-serif; font-size:0.95rem; font-weight:700; cursor:pointer; margin-top:12px; transition:all 0.2s; display:flex; align-items:center; justify-content:center; gap:8px; }
+  .btn-pay:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(122,92,66,0.4); }
+  .contact-direct a { color:#4a7c59; font-weight:700; text-decoration:none; }
+  .contact-direct a:hover { text-decoration:underline; }
+  .whatsapp-btn { display:inline-flex; align-items:center; gap:8px; background:#25D366; color:white; padding:12px 22px; border-radius:30px; text-decoration:none; font-weight:700; font-size:0.9rem; margin-top:10px; transition:all 0.2s; }
+  .whatsapp-btn:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(37,211,102,0.35); }
+</style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">דף הבית</a> / קביעת פגישה</div>
+  <h1>📅 קביעת פגישת אבחון</h1>
+  <p>הצעד הראשון לאיזון הורמונלי טבעי. פגישה מקוונת, שעה שלמה, עם סיכום ותוכנית ברורה.</p>
+</section>
+
+<div class="contact-layout">
+  <!-- BOOKING FORM -->
+  <div class="booking-form">
+    <h2>📝 לתיאום פגישת אבחון</h2>
+    <div id="formContent">
+      <div class="form-row">
+        <div class="form-group"><label>שם מלא *</label><input type="text" id="fname" placeholder="שמך המלא"></div>
+        <div class="form-group"><label>טלפון *</label><input type="tel" id="fphone" placeholder="050-0000000"></div>
+      </div>
+      <div class="form-group"><label>דוא"ל *</label><input type="email" id="femail" placeholder="your@email.com"></div>
+      <div class="form-group"><label>עיר מגורים</label><input type="text" id="fcity" placeholder="עיר"></div>
+      <div class="form-group"><label>מה מביא אותך לפנות? (לא חובה)</label><textarea id="fbg" placeholder="קצת על המצב שלך, כמה זמן את סובלת, מה ניסית..."></textarea></div>
+      <div class="form-group"><label>מתי מתאים לך?</label>
+        <select id="ftime">
+          <option value="">-- בחרי מועד מועדף --</option>
+          <option>בוקר (9:00–12:00)</option>
+          <option>צהריים (12:00–15:00)</option>
+          <option>אחה"צ / ערב (15:00–20:00)</option>
+          <option>גמיש — כל שעה מתאימה</option>
+        </select>
+      </div>
+      <div class="form-check"><input type="checkbox" id="fconsent"><label for="fconsent">אני מאשרת קבלת תוכן מקליניקת תמורה ומסכימה ל<a href="https://tmura4u.co.il/terms-of-use/" target="_blank" style="color:#4a7c59">תקנון</a></label></div>
+      <button class="btn-submit" onclick="submitForm()">לתיאום פגישת אבחון ←</button>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div class="s-icon">✅</div>
+      <h4>הטופס נשלח בהצלחה!</h4>
+      <p>חני תחזור אלייך תוך יום עסקים לתיאום המועד המדויק.<br>בינתיים ניתן גם לפנות ישירות:<br><a href="tel:0543122132" style="color:#4a7c59;font-weight:700">054-3122132</a></p>
+    </div>
+  </div>
+
+  <!-- INFO PANEL -->
+  <div class="info-panel">
+    <div class="price-highlight">
+      <div class="ph-amount">400 ₪</div>
+      <div class="ph-label">פגישת אבחון | שעה | Google Meet</div>
+      <button class="btn-pay" onclick="handlePayment()">💳 לתשלום מקוון</button>
+      <p style="font-size:0.75rem;opacity:0.7;margin-top:10px">לתשלום בביט: <a href="tel:0543122132" style="color:rgba(255,255,255,0.9)">054-3122132</a></p>
+    </div>
+
+    <div class="info-card">
+      <h3>📍 איפה ואיך?</h3>
+      <ul>
+        <li>הפגישה <strong>מקוונת לחלוטין</strong> דרך Google Meet</li>
+        <li>מכל מקום — בית, עבודה, כל מקום שנוח</li>
+        <li>לא צריך להוריד כלום — רק לינק שתשלחי</li>
+        <li>משך: <strong>שעה שלמה</strong></li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>✅ מה כלול בפגישה?</h3>
+      <ul>
+        <li>תשאול מעמיק על היסטוריה רפואית ומצב נוכחי</li>
+        <li>תמונת לשון לאבחון</li>
+        <li>הסבר על מה קורה בגוף שלך לפי הרפואה הסינית</li>
+        <li>סיכום כתוב עם אבחנה מסודרת</li>
+        <li>המלצות לתוכנית טיפול</li>
+      </ul>
+    </div>
+
+    <div class="info-card contact-direct">
+      <h3>📞 יצירת קשר ישיר</h3>
+      <p>מעדיפה ליצור קשר ישיר?</p>
+      <p style="margin-top:8px"><a href="tel:0543122132">054-3122132</a></p>
+      <a class="whatsapp-btn" href="https://wa.me/972543122132?text=שלום%20חני,%20אני%20מעוניינת%20לשמוע%20יותר%20על%20פגישת%20אבחון" target="_blank">💬 וואטסאפ</a>
+    </div>
+  </div>
+</div>
+
+<!-- REASSURANCE SECTION -->
+<div style="background:#f8f6f2;padding:48px 24px">
+  <div style="max-width:760px;margin:0 auto;text-align:center">
+    <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:1.5rem;font-weight:900;color:#1a1a1a;margin-bottom:10px">מה לצפות מפגישת האבחון</h2>
+    <p style="color:#444444;line-height:1.7;margin-bottom:28px">פגישת האבחון אינה מחייבת המשך טיפול. היא הזדמנות לקבל הבנה עמוקה של הגוף שלך ולשמוע מה ניתן לעשות.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+      <div style="background:white;border-radius:14px;padding:20px;border:1px solid #e0e0e0;text-align:right"><div style="font-size:1.5rem;margin-bottom:8px">🧠</div><p style="font-size:0.88rem;color:#444444;line-height:1.6">תצאי עם הבנה ברורה של מה קורה בגוף שלך</p></div>
+      <div style="background:white;border-radius:14px;padding:20px;border:1px solid #e0e0e0;text-align:right"><div style="font-size:1.5rem;margin-bottom:8px">📋</div><p style="font-size:0.88rem;color:#444444;line-height:1.6">סיכום כתוב עם אבחנה מסודרת ותוכנית המשך</p></div>
+      <div style="background:white;border-radius:14px;padding:20px;border:1px solid #e0e0e0;text-align:right"><div style="font-size:1.5rem;margin-bottom:8px">💚</div><p style="font-size:0.88rem;color:#444444;line-height:1.6">ללא לחץ ולא מחויבות — זמן שלך, בנחת</p></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function submitForm() {
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const email = document.getElementById('femail').value.trim();
+  if (!name || !phone || !email) { alert('אנא מלאי את שם, טלפון ודוא"ל'); return; }
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+function handlePayment() {
+  alert('יש לחבר לשירות הסליקה הפעיל שלך\n(Tranzila / Cardcom / PayPal)\n\nבינתיים ניתן לשלם בביט: 054-3122132');
+}
+</script>
+
+</body>
+</html>

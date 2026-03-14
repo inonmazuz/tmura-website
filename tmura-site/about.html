@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אודות חני חובל – תמורה רפואה סינית</title>
+<script src="shared.js"></script>
+<style>
+  .about-hero { background:linear-gradient(160deg,#EEF5E8 0%,#F7F0E6 100%); padding:64px 24px; }
+  .about-hero-inner { max-width:860px; margin:0 auto; display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center; }
+  .about-photo { width:180px; height:180px; border-radius:50%; border:5px solid #c2d9b8; object-fit:cover; box-shadow:0 8px 30px rgba(74,124,89,0.2); flex-shrink:0; }
+  .about-hero-text h1 { font-family:'Frank Ruhl Libre',serif; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:900; color:#1a1a1a; margin-bottom:6px; }
+  .about-hero-text .role { color:#4a7c59; font-weight:700; margin-bottom:14px; font-size:0.95rem; }
+  .about-hero-text p { font-size:0.95rem; color:#444444; line-height:1.8; }
+  .creds { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+  .cred { background:rgba(74,124,89,0.15); color:#4a7c59; border:1px solid rgba(74,124,89,0.3); padding:5px 14px; border-radius:8px; font-size:0.78rem; font-weight:700; }
+  @media(max-width:600px){ .about-hero-inner{grid-template-columns:1fr;text-align:center} .about-photo{margin:0 auto} .creds{justify-content:center} }
+  .timeline { max-width:760px; margin:0 auto; position:relative; }
+  .timeline::before { content:''; position:absolute; right:23px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,#c2d9b8,#C8A98A); }
+  .tl-item { display:grid; grid-template-columns:48px 1fr; gap:20px; margin-bottom:36px; }
+  .tl-dot { width:48px; height:48px; background:#4a7c59; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; position:relative; z-index:1; box-shadow:0 3px 12px rgba(74,124,89,0.25); }
+  .tl-content h3 { font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:1.05rem; color:#1a1a1a; margin-bottom:4px; }
+  .tl-content .year { font-size:0.78rem; color:#777777; margin-bottom:6px; font-weight:700; }
+  .tl-content p { font-size:0.9rem; color:#444444; line-height:1.75; }
+  .mission-box { background:linear-gradient(135deg,#4a7c59 0%,#2d5a3d 100%); color:white; border-radius:10px; padding:36px 32px; margin:40px auto; max-width:760px; }
+  .mission-box h3 { font-family:'Frank Ruhl Libre',serif; font-size:1.3rem; font-weight:900; margin-bottom:14px; }
+  .mission-box p { font-size:0.95rem; line-height:1.8; opacity:0.9; }
+  .personal-story { background:#f8f6f2; }
+  .quote-block { border-right:4px solid #7aaa8a; padding:18px 22px; border-radius:0 12px 12px 0; background:white; font-size:0.95rem; color:#1a1a1a; line-height:1.8; font-style:italic; margin:24px 0; }
+  .media-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px; }
+  .media-card { background:white; border:1px solid #e0e0e0; border-radius:14px; padding:20px; text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; transition:all 0.2s; }
+  .media-card:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.08); border-color:#7aaa8a; }
+  .media-card .media-icon { font-size:1.8rem; }
+  .media-card h4 { font-weight:700; font-size:0.92rem; color:#1a1a1a; }
+  .media-card p { font-size:0.82rem; color:#444444; line-height:1.5; }
+  .media-card .media-link { color:#4a7c59; font-size:0.82rem; font-weight:700; margin-top:auto; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="about-hero-inner">
+    <img class="about-photo" src="https://i0.wp.com/tmura4u.co.il/wp-content/uploads/2024/04/hani-180.jpg?resize=180%2C180&ssl=1" alt="חני חובל">
+    <div class="about-hero-text">
+      <div class="breadcrumb"><a href="index.html">דף הבית</a> / אודות</div>
+      <h1>חני חובל</h1>
+      <div class="role">מטפלת ברפואה סינית · מייסדת קליניקת תמורה · תל אביב</div>
+      <p>אני עוזרת לנשים עם שחלות פוליציסטיות להגיע לאיזון הורמונלי טבעי — מניסיון אישי, מהלב, ועם 11 שנות קליניקה שמדברות בעד עצמן.</p>
+      <div class="creds">
+        <span class="cred">רפואה סינית מ-2008</span>
+        <span class="cred">למדה בארץ ובסין</span>
+        <span class="cred">הדסה עין כרם</span>
+        <span class="cred">קופת חולים</span>
+        <span class="cred">שאנג חאן לון</span>
+        <span class="cred">11+ שנות ניסיון</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONAL STORY -->
+<div class="personal-story">
+  <div class="section">
+    <h2 class="section-title">הסיפור שלי</h2>
+    <p class="section-sub">למה בחרתי דווקא בנושא שחלות פוליציסטיות? כי חייתי אותו.</p>
+    <div class="prose">
+      <p>זכור לי היטב היום שבו הצטרפתי לאמא שלי לפגישה שגרתית עם הגינקולוגית שלה — פגישה שלא הייתה מיועדת בכלל עבורי. הרופאה הסתכלה עלי ואמרה: "אני רוצה לבדוק אצלך כמה דברים." שלחה אותי לבדיקות דם שכמובן לא יצאו תקינות.</p>
+      <div class="quote-block">"ההורמונים שלך מאוד גבוהים, את צריכה לקחת גלולות." — ולא יותר מזה. בת 14, לא באמת הבנתי מה זה אומר.</div>
+      <p>תוך שלושה חודשים עליתי כ-15 קילו והתמודדתי עם תופעות לוואי קשות שפגעו מאוד בביטחון העצמי שלי. שנים מאוחר יותר הבנתי שמדובר בשחלות פוליציסטיות. ולמרות שנים של לימוד רפואה סינית, אני עצמי המשכתי לסבול.</p>
+      <p>בשלב מסוים החלטתי לטפל בעצמי בכלים שלמדתי. זה היה תהליך ארוך — כמעט חצי שנה — אבל הגוף שלי הבריא והכל התאזן. <strong>היום אני נהנית לומר שאני פוליציסטית לשעבר. 🙂</strong></p>
+      <p>הניסיון האישי הזה הפך למנוע של כל העבודה הטיפולית שלי. כי אני יודעת, מהבטן, כמה זה קשה — ויודעת שיש דרך אחרת.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION BOX -->
+<div style="padding:0 24px">
+  <div class="mission-box">
+    <h3>המשימה שלי</h3>
+    <p>ליצור פתרון הוליסטי אינטגרטיבי שמהווה חיבור בין רפואה מערבית לרפואה סינית — מבלי שיהיה הצורך לבחור ביניהן. הדרך הכי מהירה ואפקטיבית לפתרון כוללת התייחסות לכל הרבדים של הבעיה: פיסית, מנטלית ורגשית. זו נקודת ההנחה שלי כשאני ניגשת לפתור בעיות בקליניקה.</p>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section">
+  <h2 class="section-title">הדרך המקצועית</h2>
+  <br>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot">📚</div>
+      <div class="tl-content">
+        <div class="year">2008</div>
+        <h3>תחילת הלימודים ברפואה סינית</h3>
+        <p>התחלתי את דרכי בעולם הרפואה הסינית, עם התמקדות מיוחדת בגינקולוגיה ובריאות האישה.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">🇨🇳</div>
+      <div class="tl-content">
+        <div class="year">לימודים בסין</div>
+        <h3>לימודי המשך בסין</h3>
+        <p>למדתי רפואה סינית גם בסין, שם נחשפתי למסורות הטיפוליות העתיקות מקור ראשון.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">🏥</div>
+      <div class="tl-content">
+        <div class="year">ניסיון קליני</div>
+        <h3>הדסה עין כרם וקופות חולים</h3>
+        <p>עבדתי כמטפלת בחדרי הלידה של בית החולים הדסה עין כרם, ובמרפאות קופת חולים — ניסיון שאינו מובן מאליו בעולם הרפואה הסינית בישראל.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">🌿</div>
+      <div class="tl-content">
+        <div class="year">שאנג חאן לון</div>
+        <h3>שיטת שאנג חאן לון</h3>
+        <p>פעילה במרכז ללימודי שאנג חאן לון — שיטת הצמחים הסינית העתיקה, שהיא הבסיס לפורמולות הצמחים בקליניקה שלה. <a href="https://shanghanlun.co.il/" target="_blank" style="color:#4a7c59">shanghanlun.co.il</a></p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">💚</div>
+      <div class="tl-content">
+        <div class="year">היום</div>
+        <h3>קליניקת תמורה</h3>
+        <p>11 שנות ניסיון, מאות לקוחות, ומשימה ברורה: לעזור לנשים להגיע לאיזון הורמונלי טבעי ולחיות בשלום עם גופן.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEDIA / LINKS -->
+<div style="background:#f8f6f2;padding:0 24px 64px">
+  <div class="section" style="padding-top:56px">
+    <h2 class="section-title">חני ברשת</h2>
+    <p class="section-sub">תוכן, הרצאות ומידע נוסף</p>
+    <div class="media-grid">
+      <a class="media-card" href="https://www.facebook.com/share/1ApSHcpz61/" target="_blank">
+        <div class="media-icon">📘</div>
+        <h4>פייסבוק</h4>
+        <p>עדכונים, תוכן מקצועי ומאמרים על בריאות האישה</p>
+        <div class="media-link">לעמוד הפייסבוק ←</div>
+      </a>
+      <a class="media-card" href="https://youtube.com/channel/UCEkZnz8SSKQ2LmjKxqsNklA" target="_blank">
+        <div class="media-icon">▶️</div>
+        <h4>ערוץ יוטיוב</h4>
+        <p>סרטוני הסבר על רפואה סינית, שחלות פוליציסטיות ובריאות האישה</p>
+        <div class="media-link">לערוץ יוטיוב ←</div>
+      </a>
+      <a class="media-card" href="https://www.linkedin.com/in/hani-hoval-07854967" target="_blank">
+        <div class="media-icon">💼</div>
+        <h4>לינקדאין</h4>
+        <p>פרופיל מקצועי, ניסיון ופרסומים</p>
+        <div class="media-link">לפרופיל ←</div>
+      </a>
+      <a class="media-card" href="https://shanghanlun.co.il/" target="_blank">
+        <div class="media-icon">🌿</div>
+        <h4>שאנג חאן לון</h4>
+        <p>המרכז ללימודי שאנג חאן לון — שיטת הצמחים הסינית העתיקה</p>
+        <div class="media-link">לאתר ←</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#2d5a3d,#4a7c59);padding:56px 24px;text-align:center;color:white">
+  <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:1.8rem;font-weight:900;margin-bottom:10px">רוצה לדבר עם חני?</h2>
+  <p style="opacity:0.85;margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.7">פגישת האבחון היא ההזדמנות שלך להבין מה קורה בגוף שלך ומה ניתן לעשות.</p>
+  <a class="btn-primary" href="contact.html" style="background:white;color:#4a7c59">לקביעת פגישה ←</a>
+</section>
+
+</body>
+</html>
